@@ -7,14 +7,14 @@
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
 
     <title>Pineapple Supermarket</title>
-    <link rel="icon" href="../static/img/faviconMin.ico" />
-    <!--<link rel="icon" th:href="@{/img/faviconMin.ico}" />  -->
+    <!-- <link rel="icon" href="../static/img/faviconMin.ico" /> -->
+    <link rel="icon" th:href="@{/img/faviconMin.ico}" />
     <!--BOOTSTRAP -->
-    <link rel="stylesheet" href="../static/assets/bootstrap.min.css" />
-    <!-- <link rel="stylesheet" th:href="@{../static/assets/bootstrap.min.css}" /> -->
+    <!-- <link rel="stylesheet" href="../static/assets/bootstrap.min.css" /> -->
+    <link rel="stylesheet" th:href="@{../static/assets/bootstrap.min.css}" />
     <!-- CSS -->
-    <link rel="stylesheet" href="../static/css/Login.css" />
-    <!-- <link rel="stylesheet" th:href="@{/css/Login.css}" /> -->
+    <!-- <link rel="stylesheet" href="../static/css/Login.css" /> -->
+    <link rel="stylesheet" th:href="@{/css/Login.css}" />
 </head>
 
 <body>
@@ -52,8 +52,8 @@
             <div class="col-md-4 mx-auto px-0">
                 <div class="card shadow">
                     <div class="card-header">
-                        <img src="../static/img/logoHome.svg" class="img-responsive loginLogo" alt="logoHome" />
-                        <!-- <img th:src="@{/img/logoHome.svg}" class="img-responsive loginLogo" alt="logoHome" /> -->
+                        <!-- <img src="../static/img/logoHome.svg" class="img-responsive loginLogo" alt="logoHome" /> -->
+                        <img th:src="@{/img/logoHome.svg}" class="img-responsive loginLogo" alt="logoHome" />
                     </div>
                     <div class="card-body">
                         <form id="formulario" class="needs-validation mb-4" th:action="@{/logincheck}" method="POST"
@@ -83,8 +83,8 @@
 
     <footer th:replace="fragments/footer :: footer"></footer>
     <!-- JS-->
-    <script src="../../static/assets/bootstrap.bundle.min.js"></script>
-    <!-- <script src="@{/assets/bootstrap.bundle.min.js}"></script> -->
+    <!-- <script src="../../static/assets/bootstrap.bundle.min.js"></script> -->
+    <script src="@{/assets/bootstrap.bundle.min.js}"></script>
     <script>
         (() => {
             "use strict";
