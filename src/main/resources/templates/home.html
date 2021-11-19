@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pineapel Supermarket</title>
+    <link rel="icon" href="../static/img/faviconMin.ico" />
+    <!--<link rel="icon" th:href="@{/img/faviconMin.ico}" />  -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="../static/css/home.css">
+    <!-- <link rel="stylesheet" th:href="@{/css/home.css}"> -->
+    <link rel="stylesheet" href="../static/css/navBar.css">
+    <!-- <link rel="stylesheet" th:href="@{/css/navBar.css}"> -->
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="../../static/assets/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" th:href="@{/assets/bootstrap.min.css}" /> -->
+
+</head>
+
+<body>
+    <!-- Barra de navegacion -->
+    <nav th:replace="fragments/navbar :: navbar"></nav>
+
+    <div class="homeContainer">
+        <div class="main container">
+            <img src="../static/img/logoHome.svg" class="homeLogo" alt="logoHome" />
+            <!-- <img th:src="@{/img/logoHome.svg}" class="homeLogo" alt="logoHome" /> -->
+            <h1>Pineapple Supermarket App</h1>
+            <h2>Welcome</h2>
+        </div>
+        <footer>
+
+            <a class="nav-link textoGit" href="https://github.com/Pineapple-G13" target="_blank"
+                rel="noopener noreferrer">
+                <!-- <a class="nav-link textoGit" th:href="@{https://github.com/Pineapple-G13}" target="_blank" rel="noopener noreferrer"> -->
+                <span>GitHub-G13 #Vash coding studio </span>
+            </a>
+
+            <p class="fs-6 fw-light textoDev ">Developed by Adriana Jimenez, Shel Valdez, Valentina Espinoza, Vilma
+                Garcia </p>
+            <img src="../static/img/gitIcon.png" class="headerIcon" alt="logoGithub" />
+            <!-- <img th:src="@{/img/gitIcon.png}" class="headerIcon" alt="logoGithub" /> -->
+        </footer>
+    </div>
+    <!-- JS-->
+    <script src="../../static/assets/bootstrap.bundle.min.js"></script>
+    <!-- <script src="@{/assets/bootstrap.bundle.min.js}"></script> -->
+</body>
+
+</html>
