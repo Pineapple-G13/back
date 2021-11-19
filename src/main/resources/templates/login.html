@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="ie=edge" http-equiv="X-UA-Compatible" />
 
-    <title>Login - the vash</title>
+    <title>Pineapple Supermarket</title>
+    <link rel="icon" href="../static/img/faviconMin.ico" />
+    <!--<link rel="icon" th:href="@{/img/faviconMin.ico}" />  -->
     <!--BOOTSTRAP -->
-    <link rel="stylesheet" th:href="@{../static/assets/bootstrap.min.css}" />
+    <link rel="stylesheet" href="../static/assets/bootstrap.min.css" />
+    <!-- <link rel="stylesheet" th:href="@{../static/assets/bootstrap.min.css}" /> -->
     <!-- CSS -->
-    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link rel="stylesheet" href="../static/css/Login.css" />
+    <!-- <link rel="stylesheet" th:href="@{/css/Login.css}" /> -->
 </head>
 
 <body>
+    <!-- Barra de navegacion -->
+    <!-- <nav th:replace="fragments/navbar :: navbar"></nav> -->
+
     <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
         <div class="container">
             <a class="navbar-brand" th:href="@{/login}"><img th:src="@{/img/open-book.png}" width="45" /></a>
@@ -22,8 +29,8 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="text-end">
-                <a class="btn btn-light me-1" th:href="@{/login}">Login</a>
-                <a class="btn btn-warning" th:href="@{/signup}">Singup</a>
+                <a class="btn btn-light me-1" th:href="@{/login}">Log in</a>
+                <a class="btn btn-warning" th:href="@{/signup}">Sing up</a>
             </div>
         </div>
     </nav>
@@ -43,28 +50,29 @@
     <div class="container p-4">
         <div class="row">
             <div class="col-md-4 mx-auto px-0">
-                <div class="card text-center shadow">
+                <div class="card shadow">
                     <div class="card-header">
-                        <h3>Sesión</h3>
+                        <img src="../static/img/logoHome.svg" class="img-responsive loginLogo" alt="logoHome" />
+                        <!-- <img th:src="@{/img/logoHome.svg}" class="img-responsive loginLogo" alt="logoHome" /> -->
                     </div>
                     <div class="card-body">
                         <form id="formulario" class="needs-validation mb-4" th:action="@{/logincheck}" method="POST"
                             autocomplete="off" novalidate>
 
                             <div class="form-group mb-3">
-                                <input id="correo" type="email" name="correo" placeholder="Correo" class="form-control"
-                                    required />
-                                <div class="invalid-feedback text-start">El correo es obligatorio</div>
+                                <label>Username</label><br />
+                                <input id="correo" type="email" name="correo" class="form-control" required />
+                                <div class="invalid-feedback text-start">Username is required</div>
                             </div>
 
                             <div class="form-group mb-3">
-                                <input id="clave" type="password" name="clave" placeholder="Contraseña"
-                                    class="form-control" required />
-                                <div class="invalid-feedback text-start">La contraseña es obligatoria</div>
+                                <label>Password</label><br />
+                                <input id="clave" type="password" name="clave" class="form-control" required />
+                                <div class="invalid-feedback text-start">Password is required</div>
                             </div>
 
                             <div class="form-group d-grid gap-2">
-                                <button class="btn btn-success" type="submit">Ingresar</button>
+                                <button class="btnLogin" type="submit">Log in</button>
                             </div>
                         </form>
                     </div>
@@ -74,8 +82,9 @@
     </div>
 
     <footer th:replace="fragments/footer :: footer"></footer>
-    <!--JS-->
-    <script th:src="@{/assets/bootstrap.bundle.min.js}"></script>
+    <!-- JS-->
+    <script src="../../static/assets/bootstrap.bundle.min.js"></script>
+    <!-- <script src="@{/assets/bootstrap.bundle.min.js}"></script> -->
     <script>
         (() => {
             "use strict";
