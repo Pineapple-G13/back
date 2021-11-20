@@ -1,5 +1,8 @@
+//En esta clase creamos los metodos crear,eliminar,mostrar,editar.
+//Para poder gestionar los roles implementamos userDetilsService,
+//esto nos lo provee la dependencia sprint security
+//Tambien generamos la configuracion para el encriptado de clave y algunas excepciones.
 package com.example.vash.services;
-
 import com.example.vash.entity.Usuario;
 import com.example.vash.enums.Rol;
 import com.example.vash.exception.SpringException;

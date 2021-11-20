@@ -1,3 +1,5 @@
+//En este sector hacemos la configuarion para ver quiene pueden ingresar a ciertos sitios y quienen no.
+
 package com.example.vash.security;
 import com.example.vash.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;

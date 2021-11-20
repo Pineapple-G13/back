@@ -1,5 +1,7 @@
+//Jpa nos provee el crud para que nosotros podamos gestionarlo a la base de datos,
+//aparte podemos implementar querys o otras consultas que quisieramos .
+//Una vez gestionado esto ,podemos realizar los metodos en el service
 package com.example.vash.repository;
-
 import com.example.vash.entity.Usuario;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;

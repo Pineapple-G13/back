@@ -1,4 +1,5 @@
-
+//Aca creamos toda las rutas y se conecta con los templates.cada ruta redirige a un html
+//creamos los get y los post.
 package com.example.vash.controller;
 import com.example.vash.entity.Usuario;
 import com.example.vash.exception.SpringException;

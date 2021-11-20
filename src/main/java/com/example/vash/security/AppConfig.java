@@ -1,3 +1,4 @@
+//encriptado de clave
 package com.example.vash.security;
 
 import org.springframework.context.annotation.Bean;
