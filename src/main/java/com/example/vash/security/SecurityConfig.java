@@ -1,18 +1,13 @@
 package com.example.vash.security;
-
-//import com.example.vash.services.UsuarioService;
-//import org.springframework.beans.factory.annotation.Autowired;
 import com.example.vash.services.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-//import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-//import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
 @EnableWebSecurity
@@ -23,15 +18,15 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private BCryptPasswordEncoder encoder;
     @Autowired
-public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
-auth.userDetailsService(usuarioService).passwordEncoder(encoder);
-
-}
+//public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
+//auth.userDetailsService(usuarioService).passwordEncoder(encoder);
+//
+//}
 
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        // @formatter:off
+       
         http
                 .authorizeRequests()
                     .antMatchers("/signup", "/registro", "/css/*", "/assets/*", "/img/*").permitAll()
@@ -54,6 +49,6 @@ auth.userDetailsService(usuarioService).passwordEncoder(encoder);
                 .and()
                     .csrf()
                     .disable();
-        // @formatter:on
+      
     }
 }

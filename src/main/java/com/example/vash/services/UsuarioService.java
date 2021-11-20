@@ -1,22 +1,22 @@
 package com.example.vash.services;
+
 import com.example.vash.entity.Usuario;
 import com.example.vash.enums.Rol;
 import com.example.vash.exception.SpringException;
 import com.example.vash.repository.UsuarioRepository;
 import java.util.Collections;
-import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.util.List;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
 
 @Service
 public class UsuarioService implements UserDetailsService {
@@ -60,12 +60,12 @@ public class UsuarioService implements UserDetailsService {
         usuarioRepository.save(usuario);
     }
 
-    @Transactional(readOnly = true)
+    @Transactional()//readOnly = true)
     public List<Usuario> buscarTodos() {
         return usuarioRepository.findAll();
     }
 
-    @Transactional(readOnly = true)
+    @Transactional()//readOnly = true)
     public Usuario buscarPorId(Integer id) throws SpringException {
         return usuarioRepository.findById(id).orElseThrow(() -> new SpringException(String.format(mensaje, id)));
     }
@@ -80,11 +80,11 @@ public class UsuarioService implements UserDetailsService {
         usuarioRepository.deleteById(id);
     }
 
-    @Override
+  @Override
     public UserDetails loadUserByUsername(String correo) throws UsernameNotFoundException {
-       Usuario usuario = usuarioRepository.findByCorreo(correo).orElseThrow(() -> new UsernameNotFoundException("no existe usuario asociado al correo"));
-    GrantedAuthority authority=new SimpleGrantedAuthority("ROLE_"+usuario.getRol().name());
-    return new User(usuario.getCorreo(),usuario.getClave(),Collections.singletonList(authority));
+        Usuario usuario = usuarioRepository.findByCorreo(correo)
+                .orElseThrow(() -> new UsernameNotFoundException("No existe un usuario asociado al correo ingresado"));
+        GrantedAuthority authority = new SimpleGrantedAuthority("ROLE_" + usuario.getRol().name());
+        return new org.springframework.security.core.userdetails.User(usuario.getCorreo(), usuario.getClave(), Collections.singletonList(authority));
     }
-
 }
