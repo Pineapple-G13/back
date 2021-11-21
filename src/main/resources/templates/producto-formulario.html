@@ -23,12 +23,14 @@
 
         <input th:field="*{id}" type="hidden"/>
 
+        <!--Campo de nombre-->
         <div class="form-floating mb-3 col-xl-6">
             <input class="form-control" id="nombre" placeholder="Nombre" required th:field="*{nombre}" type="text"/>
             <label for="nombre">Nombre</label>
             <div class="invalid-feedback">Debe ingresar un nombre de producto</div>
         </div>
 
+        <!--Campo de categoría-->
         <div class="form-floating mb-3 col-xl-6">
             <select aria-label="Elegir categoría" class="form-select" id="rol" th:field="*{categoria}">
                 <option selected value="">Elige una categoría</option>
@@ -41,6 +43,7 @@
             <!--<div class="invalid-feedback">Debe elegir una categoría</div>-->
         </div>
 
+        <!--Campo de descripción-->
         <div class="form-floating mb-3 col-xl-6">
             <input class="form-control" id="descripcion" placeholder="Aquí la descripción del producto"
                    th:field="*{descripcion}"
@@ -49,6 +52,7 @@
             <!--Por usabilidad puede haber productos sin descripción-->
         </div>
 
+        <!--Campo de cantidad-->
         <div class="form-floating mb-3 col-xl-6">
             <input class="form-control" id="cantidad" placeholder="Ej. 20" required
                    th:field="*{cantidad}"
@@ -57,6 +61,7 @@
             <div class="invalid-feedback">Debe ingresar una cantidad</div>
         </div>
 
+        <!--Campo de precio unitario-->
         <div class="form-floating mb-3 col-xl-6">
             <input class="form-control" id="precioUnitario" placeholder="0.00 (con decimales)" required
                    th:field="*{precioUnitario}"
@@ -65,8 +70,7 @@
             <div class="invalid-feedback">Debe ingresar un precio con decimales</div>
         </div>
 
-
-
+        <!--Botón de guardar-->
         <div class="row">
             <div class="col-xl-3">
                 <button class="btn btn-success" th:text="${action == 'guardar'} ? 'Crear usuario' : 'Guardar cambios'"

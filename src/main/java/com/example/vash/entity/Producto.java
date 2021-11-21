@@ -10,7 +10,7 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.math.BigInteger;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -40,7 +40,7 @@ public class Producto {
 
     //por buena práctica este tipo se dice el adecuado para manejar dinero
     @Column(nullable = false)
-    private BigInteger precioUnitario;
+    private BigDecimal precioUnitario;
 
     //foto
 
