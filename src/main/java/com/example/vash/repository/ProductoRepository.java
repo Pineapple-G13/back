@@ -9,6 +9,7 @@ public interface ProductoRepository extends JpaRepository<Producto, Integer> {
 
     @Override
     Optional<Producto> findById(Integer id);
-    Optional<Producto> findBynombre(String nombre);
+
+    Optional<Producto> findByNombre(String nombre);
 
 }
