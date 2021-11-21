@@ -1,8 +1,10 @@
 package com.example.vash.enums;
 
-import lombok.AllArgsConstructor;
-
-@AllArgsConstructor
+/**
+ * Categorías fijas para hacer el ordenamiento de los productos. Implementada siguiendo las intrucciones de la
+ * siguiente documentación:
+ * https://www.baeldung.com/thymeleaf-enums
+ */
 public enum Categoria {
     FRUTAS_VERDURAS("Frutas y verduras"),
     ABARROTES("Abarrotes"),
@@ -12,5 +14,13 @@ public enum Categoria {
     LACTEOS("Lácteos"),
     CARNE("Carne y Salchichonería");
 
-    private String nombreCategoria;
+    private final String nombreCategoria;
+
+    private Categoria(String nombreCategoria) {
+        this.nombreCategoria = nombreCategoria;
+    }
+
+    public String getNombreCategoria(){
+        return nombreCategoria;
+    }
 }

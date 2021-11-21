@@ -47,6 +47,7 @@
                             <button th:class="${usuario.alta} ? 'btn btn-danger btn-sm' : 'btn btn-primary btn-sm'"
                                     type="submit" th:text="${usuario.alta} ? 'Eliminar' : 'Habilitar'">
                             </button>
+                            <!--Sospecho que ese operador ternario estorba para eliminar el producto.-->
                         </form>
                     </div>
                 </td>

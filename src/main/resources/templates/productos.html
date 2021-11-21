@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+    <title>Productos - The Vash</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" th:href="@{/assets/bootstrap.min.css}"/>
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<nav th:replace="fragments/navbar :: navbar"></nav>
+
+<div class="container mt-5 main">
+    <div class="alert alert-success" th:if="${exito}" th:text="${exito}"></div>
+    <div class="alert alert-danger" th:if="${error}" th:text="${error}"></div>
+    <h1>Listado de productos</h1>
+    <hr class="mb-4"/>
+    <div th:if="${productos.isEmpty()}">
+        <h5>Todavía no hay productos cargados. <a th:href="@{/producto/crear}">Cargar producto.</a></h5>
+    </div>
+    <div class="table-responsive" th:unless="${productos.isEmpty()}">
+        <a th:href="@{/producto/crear}" class="btn btn-success mb-4">Ingresar producto</a>
+        <table class="table table-hover table-bordered">
+            <thead class="table-dark text-center">
+            <tr>
+                <th class="col-md-3">Producto</th>
+                <th class="col-md-3">Categoría</th>
+                <th class="col-md-3">Descripción</th>
+                <th class="col-md-1">Cantidad</th>
+                <th class="col-md-2">Precio Unitario</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="producto : ${productos}">
+                <td class="col-md-3" th:text="${producto.nombre}"></td>
+                <td class="col-md-3" th:text="${producto.categoria}"></td>
+                <td class="col-md-4" th:text="${producto.descripcion}"></td>
+                <td class="col-md-1" th:text="${producto.cantidad}"></td>
+                <td class="col-md-1" th:text="${producto.precioUnitario}"></td>
+                    <div class="d-flex justify-content-around">
+                        <a class="btn btn-warning btn-sm" th:href="@{/producto/editar/__${producto.id}__}">Editar</a>
+                        <form method="post"
+                              th:action="@{/producto/eliminar/__${producto.id}__}">
+                            <button th:class="${producto.alta} ? 'btn btn-danger btn-sm' : 'btn btn-primary btn-sm'"
+                                    type="submit" th:text="${producto.alta}">
+                            </button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+<!-- JS -->
+<script th:src="@{/assets/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

@@ -20,7 +20,8 @@ public class ProductoService {
     @Transactional
     public void crear(Producto dto) throws SpringException {
         /*
-            Ejemplo de Manejo de excepción
+            Ejemplo de Manejo de excepción, este código pertenece a UsuarioService,  que se tomó como muestra para
+            esta clase:
             if (UsarioRepository.existsByCorreo(dto.getCorreo())) {
             throw new SpringException("Ya existe un usuario asociado al correo ingresado");
         }*/
