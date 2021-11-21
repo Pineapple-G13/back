@@ -1,8 +1,6 @@
 package com.example.vash.services;
 
 import com.example.vash.entity.Producto;
-import com.example.vash.entity.Usuario;
-import com.example.vash.enums.Rol;
 import com.example.vash.exception.SpringException;
 import com.example.vash.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
