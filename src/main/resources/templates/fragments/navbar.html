@@ -25,8 +25,8 @@
                         </li>
                     </ul>
                 </li>
-                <!--DROPDOWN CATEGORIA-->
-                <li class="nav-item dropdown text-white">
+                <!--DROPDOWN CATEGORIA Fuera de scope del proyecto-->
+                <!--<li class="nav-item dropdown text-white">
                     <a aria-expanded="false" class="nav-link dropdown-toggle text-reset" data-bs-toggle="dropdown"
                        href="#"
                        id="dropdown-autores" role="button">
@@ -38,7 +38,7 @@
                             <a class="dropdown-item text-white" th:href="@{/autor/crear}">Crear categoria</a>
                         </li>
                     </ul>
-                </li>
+                </li>-->
                 
                 <!--DROPDOWN USUARIO -->
                 <li sec:authorize="hasRole('ADMIN')" class="nav-item dropdown text-white">
@@ -55,6 +55,13 @@
                             <a class="dropdown-item text-white" th:href="@{/usuario/crear}">Crear usuario</a>
                         </li>
                     </ul>
+                </li>
+                <!--ABOUT -->
+                <li class="nav-item text-white">
+                    <a aria-expanded="false" class="nav-link text-reset" th:href="@{/about/}"
+                       id="acerca-de" role="button">
+                        Acerca de
+                    </a>
                 </li>
             </ul>
         </div>

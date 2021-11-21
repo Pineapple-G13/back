@@ -8,6 +8,11 @@ nav, footer, .dropdown-menu {
     background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 152, 155, 1) 0.1%, rgba(0, 94, 120, 1) 94.2%);
 }
 
+.vash-logo{
+    max-width: 250px;
+    padding-bottom: 50px;
+}
+
 .index-libro {
     background-image: url(../img/library-1.jpg);
     background-position: left;

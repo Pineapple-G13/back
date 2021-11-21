@@ -26,20 +26,22 @@
         <table class="table table-hover table-bordered">
             <thead class="table-dark text-center">
             <tr>
-                <th class="col-md-3">Producto</th>
-                <th class="col-md-3">Categoría</th>
-                <th class="col-md-3">Descripción</th>
+                <th class="col-md-2">Producto</th>
+                <th class="col-md-2">Categoría</th>
+                <th class="col-md-2">Descripción</th>
                 <th class="col-md-1">Cantidad</th>
                 <th class="col-md-2">Precio Unitario</th>
+                <th class="col-md-2">Acciones</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="producto : ${productos}">
-                <td class="col-md-3" th:text="${producto.nombre}"></td>
-                <td class="col-md-3" th:text="${producto.categoria}"></td>
-                <td class="col-md-4" th:text="${producto.descripcion}"></td>
+                <td class="col-md-2" th:text="${producto.nombre}"></td>
+                <td class="col-md-2" th:text="${producto.categoria}"></td>
+                <td class="col-md-2" th:text="${producto.descripcion}"></td>
                 <td class="col-md-1" th:text="${producto.cantidad}"></td>
                 <td class="col-md-1" th:text="${producto.precioUnitario}"></td>
+                <td class="col-md-2">
                     <div class="d-flex justify-content-around">
                         <a class="btn btn-warning btn-sm" th:href="@{/producto/editar/__${producto.id}__}">Editar</a>
                         <form method="post"
