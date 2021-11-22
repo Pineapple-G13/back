@@ -9,9 +9,11 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-//En esta clase entidad generamos los atributos que va a tener nuestro entidad usuario,
-//gracias a la dependencia lombok los getter y setter se generar automaticamenete
-//llamando a la anotacion@,creamos una lista de contantes para el rol .
+
+/**
+ * En esta clase entidad generamos los atributos que va a tener nuestro entidad usuario, gracias a la dependencia
+ * lombok los getter y setter se generar automaticamenete llamando a la anotacion@,creamos una lista de contantes para el rol.
+ */
 @Entity
 @Getter
 @Setter

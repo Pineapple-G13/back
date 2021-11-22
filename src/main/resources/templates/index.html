@@ -17,19 +17,21 @@
 <div class="container mt-5 main">
     <div class="row my-auto g-4 justify-content-evenly">
         <div class="card col-lg-5 p-0 clickable-card">
-            <a class="text-decoration-none" th:href="@{/libro}">
+            <a class="text-decoration-none" th:href="@{/producto}">
                 <div class="row g-0">
                     <div class="col-md-4 index-libro"></div>
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title">PRODUCTOS</h5>
-                            <p class="card-text">Acceda a productos</p>
+                            <p class="card-text">Acceda al inventario</p>
                         </div>
                     </div>
                 </div>
             </a>
         </div>
-        <div class="card col-lg-5 p-0 clickable-card">
+
+        <!--Fuera de scope. No se desarrollará sección-->
+        <!--<div class="card col-lg-5 p-0 clickable-card">
             <a class="text-decoration-none" th:href="@{/autor}">
                 <div class="row g-0">
                     <div class="col-md-4 index-autor"></div>
@@ -41,7 +43,7 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </div>-->
        
         <div sec:authorize="hasRole('ADMIN')" class="card col-lg-5 p-0 clickable-card">
             <a class="text-decoration-none" th:href="@{/usuario}">

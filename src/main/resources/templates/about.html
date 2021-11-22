@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+    <title th:text="|${title} - The Vash|"></title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" th:href="@{/assets/bootstrap.min.css}"/>
+    <!-- CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<nav th:replace="fragments/navbar :: navbar"></nav>
+
+<div class="container mt-5 main">
+    <h1>Acerca de</h1>
+    <hr class="mb-4"/>
+    <div class="container">
+
+        <h5 class="font-weight-bold">Desarrollado por</h5>
+        <div>
+            <img th:src="@{/img/vash.png}" alt="vash studio logo">
+        </div>
+        <br>
+        <span>Vilma García, Valentina Espinoza, Adriana Jiménez y Shel Valdés.</span>
+        <p>
+            Mira el repositorio de github
+            <a th:href="@{https://github.com/Pineapple-G13/back}">aquí...</a>
+        </p>
+
+    </div>
+</div>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+<!-- JS -->
+<script th:src="@{/assets/bootstrap.bundle.min.js}"></script>
+</body>
+</html>

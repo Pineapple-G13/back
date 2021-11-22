@@ -23,8 +23,10 @@
     </div>
     <div class="table-responsive" th:unless="${usuarios.isEmpty()}">
         <a th:href="@{/usuario/crear}" class="btn btn-success mb-4">Ingresar usuario</a>
-        <table class="table table-hover table-bordered">
-            <thead class="table-dark text-center">
+
+        <!--Tabla-->
+        <table class="table table-hover table-striped table-borderless">
+            <thead>
             <tr>
                 <th class="col-md-3">Nombre</th>
                 <th class="col-md-3">Apellido</th>
@@ -47,6 +49,7 @@
                             <button th:class="${usuario.alta} ? 'btn btn-danger btn-sm' : 'btn btn-primary btn-sm'"
                                     type="submit" th:text="${usuario.alta} ? 'Eliminar' : 'Habilitar'">
                             </button>
+                            <!--Sospecho que ese operador ternario estorba para eliminar el producto.-->
                         </form>
                     </div>
                 </td>

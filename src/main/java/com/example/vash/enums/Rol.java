@@ -5,3 +5,5 @@ public enum Rol {
     USER,
     ADMIN
 }
+//si se desea cambiar la estética de los campos del formulario, se puede consultar la siguiente documentación
+//https://www.baeldung.com/thymeleaf-enums
