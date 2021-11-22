@@ -1,7 +1,7 @@
-<nav th:fragment="navbar" class="navbar navbar-expand-md navbar-dark bg-dark sticky-top"
+<nav th:fragment="navbar" class="navbar navbar-expand-md navbar-light bg-light sticky-top"
      xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
     <div class="container">
-        <a class="navbar-brand" th:href="@{/}"><img th:src="@{/img/open-book.png}" width="45"/></a>
+        <a class="navbar-brand" th:href="@{/}"><img class="brand-logo" th:src="@{/img/brand-logo.png}" width="45"/></a>
         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler"
                 data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
@@ -11,7 +11,7 @@
             <ul class="navbar-nav mb-2 mb-md-0 w-100">
                 <!--DROPDOWN PRDUCTO (antes libro) -->
                 <li class="nav-item dropdown text-white">
-                    <a aria-expanded="false" class="nav-link dropdown-toggle text-reset" data-bs-toggle="dropdown"
+                    <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
                        href="#"
                        id="dropdown-libros" role="button">
                         Productos
@@ -42,10 +42,10 @@
                 
                 <!--DROPDOWN USUARIO -->
                 <li sec:authorize="hasRole('ADMIN')" class="nav-item dropdown text-white">
-                    <a aria-expanded="false" class="nav-link dropdown-toggle text-reset" data-bs-toggle="dropdown"
+                    <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
                        href="#"
                        id="dropdown-usuarios" role="button">
-                        Usuario
+                        Usuarios
                     </a>
                     <ul aria-labelledby="dropdown-usuarios" class="dropdown-menu dropdown-menu-dark">
                         <li>
@@ -58,7 +58,7 @@
                 </li>
                 <!--ABOUT -->
                 <li class="nav-item text-white">
-                    <a aria-expanded="false" class="nav-link text-reset" th:href="@{/about/}"
+                    <a aria-expanded="false" class="nav-link" th:href="@{/about/}"
                        id="acerca-de" role="button">
                         Acerca de
                     </a>

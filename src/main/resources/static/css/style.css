@@ -1,20 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
+
+:root {
+  --primary: #DAB700;
+  --secondary: #B69B11;
+}
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #5C5C4A;
+    background-color: #F1F1EF;
 }
 
-nav, footer, .dropdown-menu {
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(0, 152, 155, 1) 0.1%, rgba(0, 94, 120, 1) 94.2%);
+//footer bootstrap class override
+footer{
+    background-color: #F1F1EF;
+    padding-top: 0px;
 }
 
+nav{
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.brand-logo{
+    width: 120px;
+}
+
+
+//btn
+.btn-secondary, .btn-primary {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.btn-primary{
+    background-color: #af940a;
+    border-color: #9f8609;
+}
+
+.btn-primary:hover {
+  background-color: #9f8609;
+  border-color: #957d09;
+}
+
+//about
 .vash-logo{
     max-width: 250px;
+    width 250px;
     padding-bottom: 50px;
 }
 
 .index-libro {
-    background-image: url(../img/library-1.jpg);
+    background-image: url(../img/inventario.jpg);
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
@@ -65,7 +103,7 @@ nav, footer, .dropdown-menu {
 }
 
 .index-usuario {
-    background-image: url(../img/library-4.jpg);
+    background-image: url(../img/empleados.jpg);
     background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
