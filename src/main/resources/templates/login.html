@@ -4,16 +4,38 @@
     <meta charset="UTF-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
-    
+
     <title>Login - the vash</title>
-     <!--BOOTSTRAP -->
+    <!--BOOTSTRAP -->
     <link rel="stylesheet" th:href="@{/assets/bootstrap.min.css}"/>
     <!-- CSS -->
     <link rel="stylesheet" th:href="@{/css/style.css}"/>
 </head>
 <body>
-<nav th:replace="fragments/navbar :: navbar"></nav>
-
+<nav th:fragment="navbar" class="navbar navbar-expand-md navbar-light bg-light sticky-top"
+     xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
+    <div class="container">
+        <a class="navbar-brand" th:href="@{/}"><img class="brand-logo" th:src="@{/img/brand-logo.png}" width="45"/></a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mb-2 mb-md-0 w-100">
+                <!--ABOUT -->
+                <li class="nav-item text-white">
+                    <a aria-expanded="false" class="nav-link" th:href="@{/about/}"
+                       id="acerca-de" role="button">
+                        Acerca de
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="text-end">
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</nav>
 <div th:if="${error}" class="container mt-4 text-center">
     <div class="row col-md-4 mx-auto">
         <div th:text="${error}" class="alert alert-danger m-0 shadow"></div>
@@ -31,7 +53,7 @@
         <div class="col-md-4 mx-auto px-0">
             <div class="card text-center shadow">
                 <div class="card-header">
-                    <h3>Sesión</h3>
+                    <h3>Iniciar Sesión</h3>
                 </div>
                 <div class="card-body">
                     <form id="formulario" class="needs-validation mb-4" th:action="@{/logincheck}" method="POST"
@@ -60,7 +82,7 @@
 </div>
 
 <footer th:replace="fragments/footer :: footer"></footer>
- <!--JS-->
+<!--JS-->
 <script th:src="@{/assets/bootstrap.bundle.min.js}"></script>
 <script>
     (() => {
@@ -76,6 +98,7 @@
             form.classList.add("was-validated");
         }, false);
     })()
-</script> 
+
+</script>
 </body>
 </html>

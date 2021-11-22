@@ -30,20 +30,6 @@
             </a>
         </div>
 
-        <!--Fuera de scope. No se desarrollará sección-->
-        <!--<div class="card col-lg-5 p-0 clickable-card">
-            <a class="text-decoration-none" th:href="@{/autor}">
-                <div class="row g-0">
-                    <div class="col-md-4 index-autor"></div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">CATEGORIAS</h5>
-                            <p class="card-text">Acceda a todas las categorias</p>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>-->
        
         <div sec:authorize="hasRole('ADMIN')" class="card col-lg-5 p-0 clickable-card">
             <a class="text-decoration-none" th:href="@{/usuario}">
