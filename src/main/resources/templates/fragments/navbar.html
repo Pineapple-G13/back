@@ -9,7 +9,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-md-0 w-100">
-                <!--DROPDOWN PRDUCTO (antes libro) -->
+                <!--DROPDOWN PRDUCTO -->
                 <li class="nav-item dropdown text-white">
                     <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
                        href="#"
@@ -25,20 +25,6 @@
                         </li>
                     </ul>
                 </li>
-                <!--DROPDOWN CATEGORIA Fuera de scope del proyecto-->
-                <!--<li class="nav-item dropdown text-white">
-                    <a aria-expanded="false" class="nav-link dropdown-toggle text-reset" data-bs-toggle="dropdown"
-                       href="#"
-                       id="dropdown-autores" role="button">
-                        Categorias
-                    </a>
-                    <ul aria-labelledby="dropdown-autores" class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item text-white" th:href="@{/autor}">Mostrar todos</a></li>
-                        <li>
-                            <a class="dropdown-item text-white" th:href="@{/autor/crear}">Crear categoria</a>
-                        </li>
-                    </ul>
-                </li>-->
                 
                 <!--DROPDOWN USUARIO -->
                 <li sec:authorize="hasRole('ADMIN')" class="nav-item dropdown text-white">
