@@ -1,7 +1,7 @@
 package com.example.vash.entity;
 import com.example.vash.enums.Rol;
-import lombok.Getter;
-import lombok.Setter;
+//import lombok.Getter;
+//import lombok.Setter;
 import org.hibernate.annotations.SQLDelete;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -15,8 +15,8 @@ import java.time.LocalDateTime;
  * lombok los getter y setter se generar automaticamenete llamando a la anotacion@,creamos una lista de contantes para el rol.
  */
 @Entity
-@Getter
-@Setter
+//@Getter
+//@Setter
 @EntityListeners(AuditingEntityListener.class)
 @SQLDelete(sql = "UPDATE usuario SET alta = false WHERE id = ?")
 public class Usuario {
