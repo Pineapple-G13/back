@@ -45,11 +45,11 @@ nav{
 }
 
 //about
-/*.vash-logo{
+.vash-logo{
     max-width: 250px;
     width 250px;
     padding-bottom: 50px;
-}*/
+}
 
 .index-libro {
     background-image: url(../img/inventario.jpg);
