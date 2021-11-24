@@ -2,11 +2,6 @@
      xmlns:th="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.w3.org/1999/xhtml">
     <div class="container">
         <a class="navbar-brand" th:href="@{/}"><img class="brand-logo" th:src="@{/img/brand-logo.png}" width="45"/></a>
-        <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
-                class="navbar-toggler"
-                data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
-            <span class="navbar-toggler-icon"></span>
-        </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mb-2 mb-md-0 w-100">
                 <!--DROPDOWN PRDUCTO -->
@@ -53,6 +48,11 @@
         </div>
         <div class="text-end">
             <a class="btn btn-light" th:href="@{/logout}">Finalizar sesión</a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler"
+                    data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </div>
 </nav>
