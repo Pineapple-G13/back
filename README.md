@@ -1,4 +1,5 @@
-# Pineapple Market app de inventario 
+
+<h1 align="center"> Pineapple Market app de inventario</h1>
 
 Una aplicación ligera y minimalista desarrollada sobre aqruitectura Modelo Vista Controlador, sostiene su código backend en Java 8 y Springboot. El frontend de la aplicación utiliza la librería Thymeleaf y Boostrap. El despliegue de la aplicación es en Heroku con base de datos MySQL.
 
@@ -10,6 +11,9 @@ Los datos del equipo de desarrollo se pueden consultar desde la pestaña Acerca 
 
 Las pruebas unitarias se pueden revisar desde la rama Junit, donde se realizaron para no entorpecer el despliegue puntual. 
 
+## Acceso 
+USER= admin@mail.com 
+PASSWORD=1234
 
 [![Screenshot-from-2021-11-24-16-04-56.png](https://i.postimg.cc/V6M6NLHx/Screenshot-from-2021-11-24-16-04-56.png)](https://postimg.cc/PpXh3hHy)
 
