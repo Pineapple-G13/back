@@ -1,8 +1,8 @@
 # Pineapple Market app de inventario 
 
-Una aplicación ligera y minimalista desarrollada sobre aqruitectura Modelo Vista Controlador, sostiene su código backend en Java 8 y Springboot. El frontend de la aplicación utiliza la librería Thymeleaf y Boostrap. Es despliegue de la aplicación es en Heroku con base de datos MySQL.
+Una aplicación ligera y minimalista desarrollada sobre aqruitectura Modelo Vista Controlador, sostiene su código backend en Java 8 y Springboot. El frontend de la aplicación utiliza la librería Thymeleaf y Boostrap. El despliegue de la aplicación es en Heroku con base de datos MySQL.
 
-Puede realizar las operaciones de Creación, modificación lectura y borrado de productos de supoermercado, los cuales se pueden categorizar en 7 departamentos distintos. 
+Puede realizar las operaciones de Creación, modificación, lectura y borrado de productos de supermercado, los cuales se pueden categorizar en 7 departamentos distintos. 
 
 Permite la alta de usuarios y su modificación, pero de momento, por cuestiones de seguridad no el borrado. Se sugiere para pruebas entrar con el usuario administrador. Favor de solicitar las claves de acceso a las desarrolladoras. Para realización de pruebas se aconseja crear nuevos usuarios con moderación, sólo para probar la funcionalidad. Puede agregar y borrar cuantos productos desee.
 
