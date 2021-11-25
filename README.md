@@ -8,6 +8,8 @@ Permite la alta de usuarios y su modificación, pero de momento, por cuestiones 
 
 Los datos del equipo de desarrollo se pueden consultar desde la pestaña Acerca de, donde se han colocado para no estorbar la experiencia de usuario, ya que no forman parte de la funcionalidad principal de la aplicación.
 
+Las pruebas unitarias se pueden revisar desde la rama Junit, donde se realizaron para no entorpecer el despliegue puntual. 
+
 
 [![Screenshot-from-2021-11-24-16-04-56.png](https://i.postimg.cc/V6M6NLHx/Screenshot-from-2021-11-24-16-04-56.png)](https://postimg.cc/PpXh3hHy)
 
